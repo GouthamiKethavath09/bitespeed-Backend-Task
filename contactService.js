@@ -1,4 +1,4 @@
-import { db } from './db.js';
+const { db } = require('./db.js');
 
 const runQuery = (sql, params = []) => {
     return new Promise((resolve, reject) => {
@@ -115,4 +115,6 @@ async function identify({ email, phoneNumber }) {
     };
 }
 
-export default identify;
+module.exports = identify;
+   
+
