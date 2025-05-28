@@ -1,13 +1,13 @@
-import express from 'express';
-import { json } from 'body-parser';
-import { init } from './db.js';
-import identify from './contactService.js';
+const express = require('express');
+const bodyParser = require('body-parser');
+const { init } = require('./db.js');
+const identify = require('./contactService.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 init();
-app.use(json());
+app.use(bodyParser.json());
 
 app.post('/identify', async (req, res) => {
     try {
