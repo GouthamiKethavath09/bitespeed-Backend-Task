@@ -1,7 +1,5 @@
-const sqlite3 = require('sqlite3').verbose();
-const fs = require('fs');
-
-const db = new sqlite3.Database('./database.db');
+const Database = require('better-sqlite3');
+const db = new Database('db.sqlite');
 
 function init() {
     const schema = fs.readFileSync('./schema.sql', 'utf8');
