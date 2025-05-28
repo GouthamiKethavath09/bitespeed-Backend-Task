@@ -1,7 +1,7 @@
 import express from 'express';
 import { json } from 'body-parser';
-import { init } from './db';
-import identify from './contactService';
+import { init } from './db.js';
+import identify from './contactService.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
